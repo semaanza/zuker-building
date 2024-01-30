@@ -1,4 +1,5 @@
-import { defineConfig } from "tinacms"
+import { defineConfig, defineSchema } from "tinacms"
+import { GlobalSchema } from "../src/layouts/globalSchema"
 
 // Your hosting provider likely exposes this as an environment variable
 const branch =
@@ -9,7 +10,6 @@ const branch =
 
 export default defineConfig({
 	branch,
-
 	clientId: process.env.PUBLIC_TINA_CLIENT_ID,
 	token: process.env.TINA_TOKEN,
 
@@ -24,7 +24,7 @@ export default defineConfig({
 		},
 	},
 	// See docs on content modeling for more info on how to setup new content models: https://tina.io/docs/schema/
-	schema: {
+	schema: defineSchema({
 		collections: [
 			{
 				name: "post",
@@ -46,6 +46,7 @@ export default defineConfig({
 					},
 				],
 			},
+			GlobalSchema,
 		],
-	},
+	}),
 })

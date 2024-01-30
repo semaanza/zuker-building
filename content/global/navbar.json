@@ -1,0 +1,37 @@
+{
+  "logo": {
+    "logoImage": "/artwork.png",
+    "logoHref": "/logo"
+  },
+  "navItems": [
+    {
+      "linkName": "Gallery",
+      "linkHref": "/gallery"
+    },
+    {
+      "linkName": "New Builds",
+      "linkHref": "/new_builds"
+    },
+    {
+      "linkName": "Additions",
+      "linkHref": "/additions"
+    },
+    {
+      "linkName": "Basements",
+      "linkHref": "/basements"
+    },
+    {
+      "linkName": "Renovations",
+      "linkHref": "/renovations"
+    },
+    {
+      "linkName": "Bathrooms",
+      "linkHref": "/bathrooms"
+    },
+    {
+      "linkName": "Kitchens",
+      "linkHref": "/kitchens"
+    }
+  ],
+  "_template": "navbar"
+}

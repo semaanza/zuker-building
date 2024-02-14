@@ -5,33 +5,42 @@
   },
   "navItems": [
     {
+      "linkName": "About Us",
+      "linkHref": "/about"
+    },
+    {
       "linkName": "Gallery",
       "linkHref": "/gallery"
-    },
-    {
-      "linkName": "New Builds",
-      "linkHref": "/new_builds"
-    },
-    {
-      "linkName": "Additions",
-      "linkHref": "/additions"
-    },
-    {
-      "linkName": "Basements",
-      "linkHref": "/basements"
-    },
-    {
-      "linkName": "Renovations",
-      "linkHref": "/renovations"
-    },
-    {
-      "linkName": "Bathrooms",
-      "linkHref": "/bathrooms"
-    },
-    {
-      "linkName": "Kitchens",
-      "linkHref": "/kitchens"
     }
   ],
+  "services": {
+    "servicesTitle": "Services",
+    "servicesItems": [
+      {
+        "serviceName": "Finish Basements",
+        "serviceHref": "/finishbasements"
+      },
+      {
+        "serviceName": "Kitchens",
+        "serviceHref": "/Kitchens"
+      },
+      {
+        "serviceName": "Bathrooms",
+        "serviceHref": "/bathrooms"
+      },
+      {
+        "serviceName": "Renovations",
+        "serviceHref": "/renovations"
+      },
+      {
+        "serviceName": "Additions",
+        "serviceHref": "/additions"
+      },
+      {
+        "serviceName": "New Builds",
+        "serviceHref": "/newbuilds"
+      }
+    ]
+  },
   "_template": "navbar"
 }

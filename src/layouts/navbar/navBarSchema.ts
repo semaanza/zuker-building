@@ -41,5 +41,40 @@ export const NavBarSchema = {
 				},
 			],
 		},
+		{
+			name: "services",
+			label: "Services",
+			type: "object",
+			fields: [
+				{
+					name: "servicesTitle",
+					label: "Services Title",
+					type: "string",
+				},
+				{
+					name: "servicesItems",
+					label: "Services Items",
+					type: "object",
+					list: true,
+					ui: {
+						itemProps: ({ serviceName: label }: { serviceName: string }) => ({
+							label,
+						}),
+					},
+					fields: [
+						{
+							name: "serviceName",
+							label: "Service Name",
+							type: "string",
+						},
+						{
+							name: "serviceHref",
+							label: "Service Href",
+							type: "string",
+						},
+					],
+				},
+			],
+		},
 	],
 }

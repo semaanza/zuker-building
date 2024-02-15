@@ -1,3 +1,4 @@
+import { footerSchema } from "./footer/footerSchema"
 import { NavBarSchema } from "./navbar/navBarSchema"
 
 export const GlobalSchema = {
@@ -5,5 +6,5 @@ export const GlobalSchema = {
 	label: "Global",
 	path: "content/global",
 	format: "json",
-	templates: [NavBarSchema],
+	templates: [NavBarSchema, footerSchema],
 }

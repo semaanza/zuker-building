@@ -115,35 +115,39 @@ const services = navBarData.data.global.services
 				>
 					<div class="p-4">
 						{
-							services?.servicesItems?.map((service) => (
-								<div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
-									<div class="flex-auto">
-										<a
-											href={service?.serviceHref}
-											class="block font-semibold text-gray-900"
-										>
-											{service?.serviceName}
-											<span class="absolute inset-0" />
-										</a>
-										<p class="mt-1 text-gray-600">
-											Lorem ipsum dolor sit amet.
-										</p>
+							services?.servicesItems?.map(
+								(service: { serviceHref: string; serviceName: string }) => (
+									<div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
+										<div class="flex-auto">
+											<a
+												href={service?.serviceHref}
+												class="block font-semibold text-gray-900"
+											>
+												{service?.serviceName}
+												<span class="absolute inset-0" />
+											</a>
+											<p class="mt-1 text-gray-600">
+												Lorem ipsum dolor sit amet.
+											</p>
+										</div>
 									</div>
-								</div>
-							))
+								),
+							)
 						}
 					</div>
 				</div>
 			</div>
 			{
-				navBarData?.data?.global?.navItems?.map((navItem) => (
-					<a
-						href={navItem?.linkHref}
-						class="text-sm font-semibold leading-6 text-gray-900"
-					>
-						{navItem?.linkName}
-					</a>
-				))
+				navBarData?.data?.global?.navItems?.map(
+					(navItem: { linkHref: string; linkName: string }) => (
+						<a
+							href={navItem?.linkHref}
+							class="text-sm font-semibold leading-6 text-gray-900"
+						>
+							{navItem?.linkName}
+						</a>
+					),
+				)
 			}
 		</div>
 		<div class="lg:flex hidden lg:flex-1 lg:justify-end">

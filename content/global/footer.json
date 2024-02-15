@@ -1,0 +1,29 @@
+{
+  "footerLogo": {
+    "footerLogoImage": "/artwork.png",
+    "footerLogoHref": "/"
+  },
+  "footerNavItems": [
+    {
+      "linkName": "test link 2",
+      "linkHref": "/"
+    },
+    {
+      "linkName": "test link 1",
+      "linkHref": "/"
+    }
+  ],
+  "footerSocialLinks": [
+    {
+      "socialName": "Instagram",
+      "socialHref": "www.instagram.com",
+      "socialImage": "/instagram.svg"
+    },
+    {
+      "socialName": "Facebook",
+      "socialHref": "www.facebook.com",
+      "socialImage": "/facebook-f.svg"
+    }
+  ],
+  "_template": "footer"
+}

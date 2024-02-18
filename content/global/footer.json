@@ -16,12 +16,12 @@
   "footerSocialLinks": [
     {
       "socialName": "Instagram",
-      "socialHref": "www.instagram.com",
+      "socialHref": "instagram.com",
       "socialImage": "/instagram.svg"
     },
     {
       "socialName": "Facebook",
-      "socialHref": "www.facebook.com",
+      "socialHref": "facebook.com",
       "socialImage": "/facebook-f.svg"
     }
   ],

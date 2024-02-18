@@ -4,8 +4,6 @@ import { client } from "../../../tina/__generated__/client"
 const footerData = await client.queries.global({
 	relativePath: "footer.json",
 })
-
-console.log(footerData)
 ---
 
 <footer class="w-full bg-slate-500 h-52 flex">
@@ -18,7 +16,7 @@ console.log(footerData)
 						socialName: string
 						socialImage: string
 					}) => (
-						<a href={navItem?.socialHref}>
+						<a href={`https://www.${navItem?.socialHref}`} target="_blank">
 							<img
 								class="w-8 h-8"
 								src={navItem?.socialImage}

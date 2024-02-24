@@ -1,0 +1,11 @@
+{
+  "title": "home",
+  "blocks": [
+    {
+      "quickAboutTitle": "About Us",
+      "quickAboutDescription": "Aliqua deserunt fugiat dolore officia in exercitation. Magna enim enim est incididunt voluptate pariatur reprehenderit in deserunt. Labore duis pariatur duis et quis. In officia ipsum qui ut ex. Veniam cillum do aliquip commodo reprehenderit quis eiusmod non est velit. Est exercitation consectetur velit et id aliqua laboris.",
+      "quickAboutImage": "/3d Transparent.png",
+      "_template": "quickAbout"
+    }
+  ]
+}

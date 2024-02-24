@@ -1,7 +1,20 @@
 ---
 import Contact from "../components/Contact.astro"
 import HeroBanner from "../components/HeroBanner.astro"
+import QuickAbout from "../components/QuickAbout/QuickAbout.astro"
 import Layout from "../layouts/Layout.astro"
+
+import { client } from "../../tina/__generated__/client"
+
+const homeData = await client.queries.pages({
+	relativePath: "home.json",
+})
+
+console.log(homeData)
+const quickAboutData = homeData?.data?.pages?.blocks?.filter(
+	(block) => block?.__typename === "PagesBlocksQuickAbout",
+)[0]
+console.log(quickAboutData)
 ---
 
 <Layout title="Zuker Building">
@@ -9,4 +22,9 @@ import Layout from "../layouts/Layout.astro"
 		<HeroBanner title="" subTitle="Coming Soon" />
 	</main>
 	<Contact />
+	<QuickAbout
+		title={quickAboutData?.quickAboutTitle}
+		description={quickAboutData?.quickAboutDescription}
+		image={quickAboutData?.quickAboutImage}
+	/>
 </Layout>

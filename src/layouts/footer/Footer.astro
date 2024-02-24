@@ -8,19 +8,19 @@ const footerData = await client.queries.global({
 
 <footer class="w-full bg-slate-500 h-52 flex">
 	<div class="w-full flex flex-col items-center justify-between p-2">
-		<div class="flex h-full w-full justify-evenly items-center">
+		<div class="flex h-full w-full justify-center items-center">
 			{
 				footerData?.data?.global?.footerSocialLinks?.map(
-					(navItem: {
+					(item: {
 						socialHref: string
 						socialName: string
 						socialImage: string
 					}) => (
-						<a href={`https://www.${navItem?.socialHref}`} target="_blank">
+						<a href={`https://www.${item?.socialHref}`} target="_blank">
 							<img
 								class="w-8 h-8"
-								src={navItem?.socialImage}
-								alt={navItem?.socialName}
+								src={item?.socialImage}
+								alt={item?.socialName}
 								height="30px"
 								width="30px"
 							/>

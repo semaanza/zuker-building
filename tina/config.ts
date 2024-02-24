@@ -1,5 +1,6 @@
 import { defineConfig, defineSchema } from "tinacms"
 import { GlobalSchema } from "../src/layouts/globalSchema"
+import { quickAboutSchema } from "../src/components/QuickAbout"
 
 // Your hosting provider likely exposes this as an environment variable
 const branch =
@@ -43,6 +44,26 @@ export default defineConfig({
 						name: "body",
 						label: "Body",
 						isBody: true,
+					},
+				],
+			},
+			{
+				name: "pages",
+				label: "Pages",
+				path: "content/pages",
+				format: "json",
+				fields: [
+					{
+						type: "string",
+						name: "title",
+						label: "Title",
+					},
+					{
+						name: "blocks",
+						label: "Blocks",
+						type: "object",
+						list: true,
+						templates: [quickAboutSchema],
 					},
 				],
 			},

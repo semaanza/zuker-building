@@ -1,6 +1,10 @@
 import { defineConfig, defineSchema } from "tinacms"
 import { GlobalSchema } from "../src/layouts/globalSchema"
-import { quickAboutSchema } from "../src/components/QuickAbout"
+import {
+	quickAboutSchema,
+	servicesIntroSchema,
+	testimonialsSchema,
+} from "../src/schemas"
 
 // Your hosting provider likely exposes this as an environment variable
 const branch =
@@ -63,7 +67,11 @@ export default defineConfig({
 						label: "Blocks",
 						type: "object",
 						list: true,
-						templates: [quickAboutSchema],
+						templates: [
+							quickAboutSchema,
+							servicesIntroSchema,
+							testimonialsSchema,
+						],
 					},
 				],
 			},

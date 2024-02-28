@@ -1,20 +1,27 @@
 ---
 import Contact from "../components/Contact.astro"
 import HeroBanner from "../components/HeroBanner.astro"
-import QuickAbout from "../components/QuickAbout/QuickAbout.astro"
+import QuickAbout from "../components/QuickAbout.astro"
 import Layout from "../layouts/Layout.astro"
 
 import { client } from "../../tina/__generated__/client"
+import ServicesIntro from "../components/ServicesIntro.astro"
+import Testimonials from "../components/Testimonials.astro"
 
 const homeData = await client.queries.pages({
 	relativePath: "home.json",
 })
 
-console.log(homeData)
 const quickAboutData = homeData?.data?.pages?.blocks?.filter(
 	(block) => block?.__typename === "PagesBlocksQuickAbout",
 )[0]
-console.log(quickAboutData)
+const servicesData = homeData?.data?.pages?.blocks?.filter(
+	(block) => block?.__typename === "PagesBlocksServicesIntro",
+)[0]
+
+const testimonialsData = homeData?.data?.pages?.blocks?.filter(
+	(block) => block?.__typename === "PagesBlocksTestimonials",
+)[0]
 ---
 
 <Layout title="Zuker Building">
@@ -26,5 +33,14 @@ console.log(quickAboutData)
 		title={quickAboutData?.quickAboutTitle}
 		description={quickAboutData?.quickAboutDescription}
 		image={quickAboutData?.quickAboutImage}
+	/>
+	<ServicesIntro
+		heading={servicesData?.heading}
+		services={servicesData?.services}
+	/>
+	<Testimonials
+		testimonials={testimonialsData?.testimonials}
+		heading={testimonialsData?.heading}
+		subHeading={testimonialsData?.subHeading}
 	/>
 </Layout>

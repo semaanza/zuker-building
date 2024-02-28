@@ -1,0 +1,36 @@
+---
+interface Props {
+	heading: string
+	services: {
+		title: string
+		image: string
+	}[]
+}
+
+const { heading, services } = Astro.props
+---
+
+<div
+	class="flex flex-col items-center h-auto w-full justify-evenly p-2 sm:p-8 bg-slate-400"
+>
+	<h1 class="text-3xl">{heading}</h1>
+	<div class="flex flex-wrap items-center h-auto justify-evenly w-full">
+		{
+			services?.map((service) => (
+				<div class="m-2 sm:m-4 rounded-xl  sm:w-1/4 h-54 p-2 sm:p-4">
+					<a
+						class="cursor-pointer hover:opacity-25 flex items-center justify-center"
+						href={`/${service.title}`}
+					>
+						<img
+							class="h-auto sm:h-32 w-auto object-center opacity-50 object-cover z-0"
+							src={service.image}
+							alt={service.title}
+						/>
+						<h3 class="absolute z-10 text-2xl">{service.title}</h3>
+					</a>
+				</div>
+			))
+		}
+	</div>
+</div>

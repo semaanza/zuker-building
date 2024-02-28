@@ -2,6 +2,54 @@
   "title": "home",
   "blocks": [
     {
+      "heading": "Testimonials",
+      "testimonials": [
+        {
+          "name": "Nova",
+          "quote": " Officia officia minim tempor sit ipsum elit id. Consequat qui exercitation sit minim incididunt velit. Est consectetur ullamco et ipsum magna aliquip do ad dolore eu mollit anim. Elit magna consequat nostrud qui ea ipsum. Dolore aute incididunt ut tempor dolore eu cse esse veniam aliqua aliquip pariatur ex."
+        },
+        {
+          "name": "Rae Rae",
+          "quote": " Officia officia minim tempor sit ipsum elit id. Consequat qui exercitation sit minim incididunt velit. Est consectetur ullamco et ipsum magna aliquip do ad dolore eu mollit anim. Elit magna consequat nostrud qui ea ipsum. Dolore aute incididunt ut tempor dolore eu commodo sit aliquip nisi nisi eiusmod nulla officia. atur ex."
+        },
+        {
+          "name": "Tucker",
+          "quote": "Est consectetur ullamco et ipsum magna aliquip do ad dolore eu mollit anim. Elit magna consequat nostrud qui ea ipsum. Dolore aute incididunt ut tempor dolore eu commodo sit aliquip nisi nisi eiusmod nulla officia. Anim esse esse veniam aliqua aliquip pariatur ex."
+        }
+      ],
+      "_template": "testimonials"
+    },
+    {
+      "heading": "Services",
+      "services": [
+        {
+          "title": "Finish Basements",
+          "image": "/3d Transparent.png"
+        },
+        {
+          "title": "Renovations",
+          "image": "/logo png for web.png"
+        },
+        {
+          "title": "Bathrooms",
+          "image": "/logo png for web.png"
+        },
+        {
+          "title": "Kitchens",
+          "image": "/logo png for web.png"
+        },
+        {
+          "title": "New Builds",
+          "image": "/logo png for web.png"
+        },
+        {
+          "title": "Additions",
+          "image": "/logo png for web.png"
+        }
+      ],
+      "_template": "servicesIntro"
+    },
+    {
       "quickAboutTitle": "About Us",
       "quickAboutDescription": "Aliqua deserunt fugiat dolore officia in exercitation. Magna enim enim est incididunt voluptate pariatur reprehenderit in deserunt. Labore duis pariatur duis et quis. In officia ipsum qui ut ex. Veniam cillum do aliquip commodo reprehenderit quis eiusmod non est velit. Est exercitation consectetur velit et id aliqua laboris.",
       "quickAboutImage": "/3d Transparent.png",

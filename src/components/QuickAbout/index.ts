@@ -1,1 +1,0 @@
-export { quickAboutSchema } from "./quickAboutSchema"

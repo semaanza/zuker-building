@@ -1,10 +1,11 @@
 ---
 import { client } from "../../../tina/__generated__/client"
 
-const navBarData = await client.queries.global({
+const navbarData = await client.queries.global({
 	relativePath: "navbar.json",
 })
-const services = navBarData.data.global.services
+
+const services = navbarData.data.global.services
 ---
 
 <script>
@@ -86,7 +87,7 @@ const services = navBarData.data.global.services
 				<span class="sr-only">Zuker Building</span>
 				<img
 					class="h-8 w-auto"
-					src={navBarData?.data?.global?.logo?.logoImage}
+					src={navbarData?.data?.global?.logo?.logoImage}
 					alt="Zuker Building Logo"
 				/>
 			</a>
@@ -132,9 +133,9 @@ const services = navBarData.data.global.services
 												{service?.serviceName}
 												<span class="absolute inset-0" />
 											</a>
-											<p class="mt-1 text-gray-600">
+											{/* <p class="mt-1 text-gray-600">
 												Lorem ipsum dolor sit amet.
-											</p>
+											</p> */}
 										</div>
 									</div>
 								),
@@ -144,7 +145,7 @@ const services = navBarData.data.global.services
 				</div>
 			</div>
 			{
-				navBarData?.data?.global?.navItems?.map(
+				navbarData?.data?.global?.navItems?.map(
 					(navItem: { linkHref: string; linkName: string }) => (
 						<a
 							href={navItem?.linkHref}
@@ -184,7 +185,7 @@ const services = navBarData.data.global.services
 					<span class="sr-only">Zuker Building</span>
 					<img
 						class="h-8 w-auto"
-						src={navBarData?.data?.global?.logo?.logoImage}
+						src={navbarData?.data?.global?.logo?.logoImage}
 						alt="Zuker Building Logo"
 					/>
 				</a>
@@ -252,7 +253,7 @@ const services = navBarData.data.global.services
 							</div>
 						</div>
 						{
-							navBarData?.data?.global?.navItems?.map((navItem) => (
+							navbarData?.data?.global?.navItems?.map((navItem) => (
 								<a
 									href={navItem?.linkHref}
 									class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"

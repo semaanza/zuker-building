@@ -1,6 +1,7 @@
 import { defineConfig, defineSchema } from "tinacms"
 import { GlobalSchema } from "../src/layouts/globalSchema"
 import {
+	gallerySchema,
 	quickAboutSchema,
 	servicesIntroSchema,
 	testimonialsSchema,
@@ -71,6 +72,7 @@ export default defineConfig({
 							quickAboutSchema,
 							servicesIntroSchema,
 							testimonialsSchema,
+							gallerySchema,
 						],
 					},
 				],

@@ -1,10 +1,20 @@
 ---
 import Layout from "../layouts/Layout.astro"
-import HeroBanner from "../components/HeroBanner.astro"
+import { client } from "../../tina/__generated__/client"
+import GalleryComponent from "../components/GalleryComponent.astro"
+
+const galleryData = await client.queries.pages({
+	relativePath: "gallery.json",
+})
+
+const imageArray = galleryData.data.pages.blocks?.find(
+	(block) => block?.__typename === "PagesBlocksGallery",
+)?.images
 ---
 
 <Layout title="Zuker Building">
-	<main class="h-dvh flex flex-col items-center justify-center">
-		<h1 class="flex text-3xl font-bold text-red-900">Gallery Coming Soon!</h1>
-	</main>
+	<div class="h-full flex flex-col items-center justify-center">
+		<h1 class="flex text-3xl font-bold text-red-900">Gallery</h1>
+		<GalleryComponent imageArray={imageArray} />
+	</div>
 </Layout>

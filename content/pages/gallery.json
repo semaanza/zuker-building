@@ -1,0 +1,25 @@
+{
+  "title": "Gallery Page",
+  "blocks": [
+    {
+      "images": [
+        {
+          "imageTitle": "Another Bathroom Test",
+          "image": "/IMG_2207.jpg",
+          "imageDescription": "This is a new bathroom"
+        },
+        {
+          "imageTitle": "Bathroom Test",
+          "image": "/IMG_2206.jpg",
+          "imageDescription": "Test bathroom"
+        },
+        {
+          "imageTitle": "Shower Unit test",
+          "image": "/IMG_2217.jpg",
+          "imageDescription": "This is a shower unit"
+        }
+      ],
+      "_template": "gallery"
+    }
+  ]
+}

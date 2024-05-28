@@ -1,0 +1,35 @@
+---
+import { Image } from "astro:assets"
+
+interface Props {
+	imageArray: {
+		image: string
+		imageTitle?: string
+		imageDescription?: string
+	}[]
+}
+
+const { imageArray } = Astro.props
+---
+
+<div
+	class="flex flex-wrap w-full items-center justify-evenly h-auto"
+	id="image-section"
+>
+	{
+		imageArray.map((image) => (
+			<div class="w-full sm:w-1/2 lg:w-1/4 m-8">
+				<Image
+					src={image.image}
+					alt={image.imageTitle ?? ""}
+					width={500}
+					height={500}
+					sizes="(max-width: 768px) 100vw, 432px"
+					class="contain"
+				/>
+				{/* <h2>{image.imageTitle}</h2>
+				<p>{image.imageDescription}</p> */}
+			</div>
+		))
+	}
+</div>

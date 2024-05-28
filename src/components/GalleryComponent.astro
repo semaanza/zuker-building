@@ -13,19 +13,19 @@ const { imageArray } = Astro.props
 ---
 
 <div
-	class="flex flex-wrap w-full items-center justify-evenly h-auto"
+	class="flex flex-wrap w-full items-center justify-evenly h-full"
 	id="image-section"
 >
 	{
 		imageArray.map((image) => (
-			<div class="w-full sm:w-1/2 lg:w-1/4 m-8">
-				<Image
+			<div class="w-full sm:w-1/2 lg:w-1/4 m-6">
+				<img
 					src={image.image}
 					alt={image.imageTitle ?? ""}
 					width={500}
 					height={500}
 					sizes="(max-width: 768px) 100vw, 432px"
-					class="contain"
+					class=" object-contain w-full h-full rounded-lg shadow-lg"
 				/>
 				{/* <h2>{image.imageTitle}</h2>
 				<p>{image.imageDescription}</p> */}

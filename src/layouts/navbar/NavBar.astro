@@ -126,13 +126,13 @@ const services = navbarData.data.global.services
 								(service: { serviceHref: string; serviceName: string }) => (
 									<div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
 										<div class="flex-auto">
-											<a
+											<p
 												href={service?.serviceHref}
 												class="block font-semibold text-gray-900"
 											>
 												{service?.serviceName}
 												<span class="absolute inset-0" />
-											</a>
+											</p>
 											{/* <p class="mt-1 text-gray-600">
 												Lorem ipsum dolor sit amet.
 											</p> */}
@@ -242,12 +242,9 @@ const services = navbarData.data.global.services
 							<div class="mt-2 space-y-2" id="disclosure-1">
 								{
 									services?.servicesItems?.map((service) => (
-										<a
-											href={service?.serviceHref}
-											class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-										>
+										<p class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">
 											{service?.serviceName}
-										</a>
+										</p>
 									))
 								}
 							</div>

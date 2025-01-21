@@ -4,6 +4,10 @@
     {
       "images": [
         {
+          "imageTitle": "open basement 1",
+          "image": "/1736380190405.jpg"
+        },
+        {
           "imageTitle": "Another Bathroom Test",
           "image": "/IMG_2207.jpg",
           "imageDescription": "This is a new bathroom"

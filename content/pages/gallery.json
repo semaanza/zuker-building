@@ -4,10 +4,6 @@
     {
       "images": [
         {
-          "imageTitle": "test",
-          "image": "/5.jpg"
-        },
-        {
           "imageTitle": "Another Bathroom Test",
           "image": "/IMG_2207.jpg",
           "imageDescription": "This is a new bathroom"

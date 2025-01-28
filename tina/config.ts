@@ -5,6 +5,7 @@ import {
 	quickAboutSchema,
 	servicesIntroSchema,
 	testimonialsSchema,
+	recentProjectSchema,
 } from "../src/schemas"
 
 // Your hosting provider likely exposes this as an environment variable
@@ -73,6 +74,7 @@ export default defineConfig({
 							servicesIntroSchema,
 							testimonialsSchema,
 							gallerySchema,
+							recentProjectSchema,
 						],
 					},
 				],

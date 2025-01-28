@@ -10,14 +10,14 @@ const services = navbarData.data.global.services
 
 <script>
 	//Flyout Menu Display
-	const flyoutMenuCloseOptions = (flyoutMenu) => {
-		flyoutMenu.ariaLabel = "closed"
-		flyoutMenu.style.opacity = "0"
-		flyoutMenu.style.transform = "translateY(0px)"
-		setTimeout(() => {
-			flyoutMenu.classList.add("invisible")
-		}, 500)
-	}
+	// const flyoutMenuCloseOptions = (flyoutMenu) => {
+	// 	flyoutMenu.ariaLabel = "closed"
+	// 	flyoutMenu.style.opacity = "0"
+	// 	flyoutMenu.style.transform = "translateY(0px)"
+	// 	setTimeout(() => {
+	// 		flyoutMenu.classList.add("invisible")
+	// 	}, 500)
+	// }
 
 	const mobileMenuCloseOptions = (mobileMenu) => {
 		mobileMenu.ariaLabel = "closed"
@@ -26,25 +26,26 @@ const services = navbarData.data.global.services
 			mobileMenu.classList.add("invisible")
 		}, 300)
 	}
-	document
-		.getElementById("flyout-menu-button")
-		?.addEventListener("click", () => {
-			const flyoutMenu = document.getElementById("flyout-menu")
-			if (flyoutMenu?.ariaLabel === "closed") {
-				flyoutMenu.classList.remove("invisible")
-				flyoutMenu.ariaLabel = "open"
-				flyoutMenu.style.opacity = "1"
-				flyoutMenu.style.transform = "translatey(20px)"
-			} else if (flyoutMenu?.ariaLabel === "open") {
-				flyoutMenuCloseOptions(flyoutMenu)
-			}
-		})
-	document.getElementById("flyout-menu")?.addEventListener("mouseleave", () => {
-		const flyoutMenu = document.getElementById("flyout-menu")
-		if (flyoutMenu?.ariaLabel === "open") {
-			flyoutMenuCloseOptions(flyoutMenu)
-		}
-	})
+
+	// document
+	// 	.getElementById("flyout-menu-button")
+	// 	?.addEventListener("click", () => {
+	// 		const flyoutMenu = document.getElementById("flyout-menu")
+	// 		if (flyoutMenu?.ariaLabel === "closed") {
+	// 			flyoutMenu.classList.remove("invisible")
+	// 			flyoutMenu.ariaLabel = "open"
+	// 			flyoutMenu.style.opacity = "1"
+	// 			flyoutMenu.style.transform = "translatey(20px)"
+	// 		} else if (flyoutMenu?.ariaLabel === "open") {
+	// 			flyoutMenuCloseOptions(flyoutMenu)
+	// 		}
+	// 	})
+	// document.getElementById("flyout-menu")?.addEventListener("mouseleave", () => {
+	// 	const flyoutMenu = document.getElementById("flyout-menu")
+	// 	if (flyoutMenu?.ariaLabel === "open") {
+	// 		flyoutMenuCloseOptions(flyoutMenu)
+	// 	}
+	// })
 	//Mobile Menu Display
 	document
 		.getElementById("mobile-display-button")
@@ -75,6 +76,12 @@ const services = navbarData.data.global.services
 			mobileMenuCloseOptions(mobileMenu)
 		}
 	})
+	document.getElementById("mobile-services")?.addEventListener("click", () => {
+		const mobileMenu = document.getElementById("mobile-menu")
+		if (mobileMenu?.ariaLabel === "open") {
+			mobileMenuCloseOptions(mobileMenu)
+		}
+	})
 </script>
 
 <header>
@@ -94,8 +101,9 @@ const services = navbarData.data.global.services
 		</div>
 		<div class="hidden lg:flex lg:gap-x-12">
 			<div class="relative">
-				<button
+				<a
 					id="flyout-menu-button"
+					href="/#services"
 					type="button"
 					class="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900"
 					aria-labrl="open flyout menu"
@@ -112,7 +120,7 @@ const services = navbarData.data.global.services
 							d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
 							clip-rule="evenodd"></path>
 					</svg>
-				</button>
+				</a>
 
 				<!-- Flyout menu, show/hide based on flyout menu state. -->
 				<div
@@ -126,13 +134,13 @@ const services = navbarData.data.global.services
 								(service: { serviceHref: string; serviceName: string }) => (
 									<div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
 										<div class="flex-auto">
-											<p
+											<a
 												href={service?.serviceHref}
 												class="block font-semibold text-gray-900"
 											>
 												{service?.serviceName}
 												<span class="absolute inset-0" />
-											</p>
+											</a>
 											{/* <p class="mt-1 text-gray-600">
 												Lorem ipsum dolor sit amet.
 											</p> */}
@@ -214,11 +222,13 @@ const services = navbarData.data.global.services
 				<div class="-my-6 divide-y divide-gray-500/10">
 					<div class="space-y-2 py-6">
 						<div class="-mx-3">
-							<button
+							<a
 								type="button"
+								href="/#services"
 								class="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
 								aria-controls="disclosure-1"
 								aria-expanded="false"
+								id="mobile-services"
 							>
 								{services?.servicesTitle}
 								<!--
@@ -237,9 +247,9 @@ const services = navbarData.data.global.services
 										d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
 										clip-rule="evenodd"></path>
 								</svg> -->
-							</button>
+							</a>
 							<!-- 'Product' sub-menu, show/hide based on menu state. -->
-							<div class="mt-2 space-y-2" id="disclosure-1">
+							<!-- <div class="mt-2 space-y-2" id="disclosure-1">
 								{
 									services?.servicesItems?.map((service) => (
 										<p class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">
@@ -247,7 +257,7 @@ const services = navbarData.data.global.services
 										</p>
 									))
 								}
-							</div>
+							</div> -->
 						</div>
 						{
 							navbarData?.data?.global?.navItems?.map((navItem) => (

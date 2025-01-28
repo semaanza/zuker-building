@@ -7,6 +7,7 @@ import Layout from "../layouts/Layout.astro"
 import { client } from "../../tina/__generated__/client"
 import ServicesIntro from "../components/ServicesIntro.astro"
 import Testimonials from "../components/Testimonials.astro"
+import RecentProject from "../components/RecentProject.astro"
 
 const homeData = await client.queries.pages({
 	relativePath: "home.json",
@@ -26,21 +27,27 @@ const testimonialsData = homeData?.data?.pages?.blocks?.filter(
 
 <Layout title="Zuker Building">
 	<main class="h-dvh flex flex-col items-center">
-		<HeroBanner title="" subTitle="Coming Soon" />
+		<HeroBanner />
 	</main>
 	<Contact />
 	<QuickAbout
-		title={quickAboutData?.quickAboutTitle}
-		description={quickAboutData?.quickAboutDescription}
-		image={quickAboutData?.quickAboutImage}
+		title={quickAboutData?.quickAboutTitle as string}
+		description={quickAboutData?.quickAboutDescription as string}
+		image={quickAboutData?.quickAboutImage as string}
 	/>
 	<ServicesIntro
-		heading={servicesData?.heading}
-		services={servicesData?.services}
+		heading={servicesData?.heading as string}
+		services={servicesData?.services as []}
 	/>
 	<Testimonials
-		testimonials={testimonialsData?.testimonials}
-		heading={testimonialsData?.heading}
-		subHeading={testimonialsData?.subHeading}
+		testimonials={testimonialsData?.testimonials as []}
+		heading={testimonialsData?.heading as string}
+		subHeading={testimonialsData?.subHeading as string}
+	/>
+	<RecentProject
+		heading={"Most Recent Project"}
+		description=""
+		preImage={}
+		postImage={}
 	/>
 </Layout>

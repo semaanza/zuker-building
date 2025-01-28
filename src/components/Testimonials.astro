@@ -3,7 +3,7 @@ import { HeadingIcon } from "tinacms"
 
 interface Props {
 	heading: string
-	subHeading: string
+	subHeading?: string
 	testimonials: {
 		name: string
 		quote: string
@@ -13,7 +13,11 @@ interface Props {
 const { heading, subHeading, testimonials } = Astro.props
 ---
 
-<div class="p-4 flex items-center flex-col">
+<div
+	id="testimonials"
+	aria-label="Testimonials"
+	class="p-4 flex items-center flex-col"
+>
 	<div class="flex flex-col items-center mb-4 mt-4">
 		<h1 class="text-3xl">{heading}</h1>
 		<h2 class="text-xl">{subHeading}</h2>

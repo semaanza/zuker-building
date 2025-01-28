@@ -5,10 +5,6 @@
   },
   "navItems": [
     {
-      "linkName": "About Us",
-      "linkHref": "/#about"
-    },
-    {
       "linkName": "Gallery",
       "linkHref": "/gallery"
     }

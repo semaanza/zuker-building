@@ -18,33 +18,7 @@
     }
   ],
   "services": {
-    "servicesTitle": "Services",
-    "servicesItems": [
-      {
-        "serviceName": "Finish Basements",
-        "serviceHref": "/finishbasements"
-      },
-      {
-        "serviceName": "Kitchens",
-        "serviceHref": "/Kitchens"
-      },
-      {
-        "serviceName": "Bathrooms",
-        "serviceHref": "/bathrooms"
-      },
-      {
-        "serviceName": "Renovations",
-        "serviceHref": "/renovations"
-      },
-      {
-        "serviceName": "Additions",
-        "serviceHref": "/additions"
-      },
-      {
-        "serviceName": "New Builds",
-        "serviceHref": "/newbuilds"
-      }
-    ]
+    "servicesTitle": "Services"
   },
   "_template": "navbar"
 }

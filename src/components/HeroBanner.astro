@@ -3,14 +3,15 @@ import { client } from "../../tina/__generated__/client"
 
 // const myHeroBanner = await client.queries.comps
 interface Props {
-	title: string
-	subTitle: string
+	title?: string
+	subTitle?: string
 }
 
 const { title, subTitle } = Astro.props
 ---
 
 <div
+	aria-label="Hero Banner"
 	class="relative isolate px-6 pt-14 bg-hero-pattern lg:px-8 bg-slate-300 w-screen h-full bg-center bg-cover flex"
 >
 	<div

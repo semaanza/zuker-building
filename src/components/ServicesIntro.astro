@@ -3,7 +3,7 @@ interface Props {
 	heading: string
 	services: {
 		title: string
-		image: string
+		image?: string
 	}[]
 }
 
@@ -11,23 +11,35 @@ const { heading, services } = Astro.props
 ---
 
 <div
+	id="services"
+	aria-label="Services we offer"
 	class="flex flex-col items-center h-auto w-full justify-evenly p-2 sm:p-8 bg-slate-400"
 >
-	<h1 class="text-3xl">{heading}</h1>
-	<div class="flex flex-wrap items-center h-auto justify-evenly w-full">
-		{
-			services?.map((service) => (
-				<div class="m-2 sm:m-4 rounded-xl  sm:w-1/4 h-54 p-2 sm:p-4">
-					<div class=" hover:opacity-25 flex items-center justify-center">
-						<img
-							class="h-auto sm:h-32 w-auto object-center opacity-50 object-cover z-0"
-							src={service.image}
-							alt={service.title}
-						/>
-						<h3 class="absolute z-10 text-2xl">{service.title}</h3>
-					</div>
-				</div>
-			))
-		}
+	<h1 class="text-3xl mb-8 sm:mb-4">{heading}</h1>
+	<div
+		class="flex flex-col sm:flex-row flex-wrap items-center h-auto justify-evenly w-full"
+	>
+		<div
+			class="flex items-center flex-col justify-center w-full sm:w-1/2 mb-6 sm:mb-0"
+		>
+			{
+				services?.map((service) => (
+					<h3 class=" text-2xl sm:mb-4">{service.title}</h3>
+				))
+			}
+		</div>
+		{/* description*/}
+		<div class="flex flex-col items-center justify-center w-full sm:w-1/2">
+			<p
+				class="text-lg sm:w-4/5 text-center sm:text-start bg-zinc-300 p-4 rounded-lg"
+			>
+				We offer a comprehensive suite of services designed to transform your
+				vision into reality. From initial consultation and planning to final
+				implementation and delivery, our experienced team is dedicated to
+				supporting you at every stage of your project journey. With our proven
+				track record of successful projects and commitment to excellence, you
+				can trust us to help you achieve your goals efficiently and effectively.
+			</p>
+		</div>
 	</div>
 </div>

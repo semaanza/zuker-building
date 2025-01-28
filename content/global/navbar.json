@@ -5,6 +5,10 @@
   },
   "navItems": [
     {
+      "linkName": "Services",
+      "linkHref": "/services"
+    },
+    {
       "linkName": "About Us",
       "linkHref": "/about"
     },

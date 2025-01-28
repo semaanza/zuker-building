@@ -2,6 +2,13 @@
   "title": "home",
   "blocks": [
     {
+      "heading": "Most Recent Project",
+      "recentProjectDescription": "We're thrilled to announce the successful completion of your bathroom renovation! Through careful attention to detail and expert craftsmanship, we've transformed your space into a stunning modern sanctuary. The premium fixtures, elegant tilework, and optimized layout work together seamlessly to create both beauty and functionality. The updated lighting and sophisticated finishes bring a touch of luxury to your daily routine, while the improved storage solutions enhance convenience. We're confident you'll enjoy this revitalized space for years to come and are grateful for the opportunity to bring your vision to life.",
+      "preImage": "/FunPic_20240919_105832717.jpg",
+      "postImage": "/FunPic_20241125_220714978.jpg",
+      "_template": "recentProject"
+    },
+    {
       "heading": "Testimonials",
       "testimonials": [
         {

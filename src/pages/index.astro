@@ -23,6 +23,10 @@ const servicesData = homeData?.data?.pages?.blocks?.filter(
 const testimonialsData = homeData?.data?.pages?.blocks?.filter(
 	(block) => block?.__typename === "PagesBlocksTestimonials",
 )[0]
+
+const recentProjectData = homeData?.data?.pages?.blocks?.filter(
+	(block) => block?.__typename === "PagesBlocksRecentProject",
+)[0]
 ---
 
 <Layout title="Zuker Building">
@@ -42,12 +46,11 @@ const testimonialsData = homeData?.data?.pages?.blocks?.filter(
 	<Testimonials
 		testimonials={testimonialsData?.testimonials as []}
 		heading={testimonialsData?.heading as string}
-		subHeading={testimonialsData?.subHeading as string}
 	/>
 	<RecentProject
-		heading={"Most Recent Project"}
-		description=""
-		preImage={}
-		postImage={}
+		heading={recentProjectData?.heading as string}
+		description={recentProjectData?.recentProjectDescription as string}
+		preImage={recentProjectData?.preImage as string}
+		postImage={recentProjectData?.postImage as string}
 	/>
 </Layout>

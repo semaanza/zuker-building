@@ -7,8 +7,8 @@ const footerData = await client.queries.global({
 ---
 
 <footer class="w-full bg-slate-500 h-52 flex">
-	<div class="w-full flex flex-col items-center justify-between p-2">
-		<div class="flex h-full w-full justify-center items-center">
+	<div class="w-full flex flex-col items-center justify-evenly p-2">
+		<div class="flex h-1/3 w-full justify-center items-center">
 			{
 				footerData?.data?.global?.footerSocialLinks?.map(
 					(item: {
@@ -28,6 +28,9 @@ const footerData = await client.queries.global({
 					),
 				)
 			}
+		</div>
+		<div>
+			<p class="text-xl">Proudly serving Oakland County</p>
 		</div>
 		<div>&copy; {new Date().getFullYear()} Zuker Building</div>
 	</div>

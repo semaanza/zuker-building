@@ -3,6 +3,7 @@ import Contact from "../components/Contact.astro"
 import HeroBanner from "../components/HeroBanner.astro"
 import QuickAbout from "../components/QuickAbout.astro"
 import Layout from "../layouts/Layout.astro"
+import StepCard from "../components/StepCard.astro"
 
 import { client } from "../../tina/__generated__/client"
 import ServicesIntro from "../components/ServicesIntro.astro"
@@ -34,6 +35,38 @@ const recentProjectData = homeData?.data?.pages?.blocks?.filter(
 		<HeroBanner />
 	</main>
 	<Contact />
+	<div>
+		<h2 class="text-4xl text-slate-800 text-center pt-8 pb-8">Our Process</h2>
+	</div>
+	<div
+		class="flex flex-wrap flex-col sm:flex-row items-center justify-evenly pt-8 pb-8"
+	>
+		<!-- map through cards here -->
+		<StepCard
+			title="Set it up"
+			body="Give us a call or fill out the form to schedule a consultation."
+			stepNumber={1}
+			image="../../public/3d Transparent.png"
+		/>
+		<StepCard
+			title="Appointment"
+			body="We'll come to your home to take measurements and discuss your project."
+			stepNumber={2}
+			image="../../public/3d Transparent.png"
+		/>
+		<StepCard
+			title="Proposal"
+			body="We'll review the proposal and project details with you."
+			stepNumber={3}
+			image="../../public/3d Transparent.png"
+		/>
+		<StepCard
+			title="Project Start!"
+			body="We'll set the start date and get to work!"
+			stepNumber={4}
+			image="../../public/3d Transparent.png"
+		/>
+	</div>
 	<QuickAbout
 		title={quickAboutData?.quickAboutTitle as string}
 		description={quickAboutData?.quickAboutDescription as string}

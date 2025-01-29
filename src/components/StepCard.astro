@@ -1,0 +1,32 @@
+---
+interface Props {
+	title: string
+	body: string
+	stepNumber: number
+	image: string
+}
+
+const { title, body, stepNumber, image } = Astro.props
+---
+
+<div
+	class="flex flex-col w-4/5 sm:w-[275px] h-[400px] p-4 border-red-900 border-4 shadow-lg rounded-lg bg-slate-500 mb-4"
+>
+	<div
+		class="flex h-auto w-8 border-2 border-slate-200 rounded-full items-center justify-center"
+	>
+		<h3
+			class="text-slate-200 h-full w-full text-2xl flex items-center justify-center"
+		>
+			{stepNumber}
+		</h3>
+	</div>
+	<div class="h-1/2">
+		<img class="object-contain h-full w-full" src={image} alt={title} />
+	</div>
+	<h3 class="h-auto text-2xl border-b-2 border-b-red-900 text-slate-200">
+		{title}
+	</h3>
+	<!-- add 1/4 border -->
+	<p class="h-1/4 text-slate-200 pt-4">{body}</p>
+</div>

@@ -9,7 +9,7 @@ export const ourProcessSchema = {
 			type: "object",
 			list: true,
 			ui: {
-				itemProps: ({ name: label }: { name: string }) => ({
+				itemProps: ({ title: label }: { title: string }) => ({
 					label,
 				}),
 			},
@@ -32,7 +32,7 @@ export const ourProcessSchema = {
 				{
 					name: "image",
 					label: "Image",
-					type: "string",
+					type: "image",
 				},
 			],
 		},

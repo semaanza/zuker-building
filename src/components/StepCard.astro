@@ -21,12 +21,11 @@ const { title, body, stepNumber, image } = Astro.props
 			{stepNumber}
 		</h3>
 	</div>
-	<div class="h-1/2">
+	<div class="h-1/2 w-auto">
 		<img class="object-contain h-full w-full" src={image} alt={title} />
 	</div>
 	<h3 class="h-auto text-2xl border-b-2 border-b-red-900 text-slate-200">
 		{title}
 	</h3>
-	<!-- add 1/4 border -->
 	<p class="h-1/4 text-slate-200 pt-4">{body}</p>
 </div>

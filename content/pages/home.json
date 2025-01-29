@@ -57,6 +57,35 @@
       "quickAboutDescription": "Welcome to Zuker Building, the premier destination for transformative home renovations. Founded by a team of passionate and experienced professionals, Zuker Building is dedicated to elevating living spaces through exceptional craftsmanship and timeless design. Specializing in finished basements, bathrooms, and kitchens, we bring a fresh perspective to every project, focusing on quality and design simplicity. Our goal is to create spaces that not only meet but exceed our clients' expectations, blending functionality with aesthetic appeal seamlessly. At Zuker Building, we believe that a successful renovation is built on three pillars: quality, craftsmanship, and attention to detail. We source the finest materials and employ skilled artisans to ensure that each project is executed to perfection. Our commitment to customer satisfaction drives every decision we make. From the initial consultation to project completion, we prioritize open communication, transparency, and collaboration with our clients. We understand that your home is your sanctuary, and we strive to make the renovation journey as smooth and enjoyable as possible. Whether you're dreaming of a cozy basement retreat, a spa-like bathroom oasis, or a gourmet kitchen that inspires culinary creativity, Zuker Building is here to turn your vision into reality. ",
       "quickAboutImage": "/Facetune_.jpg",
       "_template": "quickAbout"
+    },
+    {
+      "cards": [
+        {
+          "number": 1,
+          "title": "Set It Up",
+          "description": "Give us a call or fill out the form to schedule a consultation.",
+          "image": "/3d Transparent.png"
+        },
+        {
+          "number": 2,
+          "title": "Appointment",
+          "description": "We'll come to your home to take measurements and discuss your project.",
+          "image": "/3d Transparent.png"
+        },
+        {
+          "number": 3,
+          "title": "Proposal",
+          "description": "We'll review the proposal and project details with you.",
+          "image": "/3d Transparent.png"
+        },
+        {
+          "number": 4,
+          "title": "Project Start!",
+          "description": "We'll set the start date and get to work!",
+          "image": "/3d Transparent.png"
+        }
+      ],
+      "_template": "ourProcess"
     }
   ]
 }

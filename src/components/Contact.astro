@@ -3,7 +3,7 @@
 ---
 
 <div
-	id="contact"
+	id="contact-wrapper"
 	aria-label="Contact Us"
 	class="flex flex-col justify-evenly items-center w-full mb-10 mt-10"
 >
@@ -16,8 +16,7 @@
 			possible.
 		</p>
 		<form
-			method="POST"
-			action="mailto:andrew@zukerbuilding.com"
+			id="contact-form"
 			class="flex flex-col items-start justify-evenly w-full sm:w-3/4"
 		>
 			<label for="name">Name:</label>
@@ -69,7 +68,8 @@
 
 			<button
 				class="rounded-md w-full px-3.5 py-2.5 text-sm font-semibold text-slate-600 shadow-sm bg-slate-100 hover:bg-slate-400 hover:text-slate-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-				type="submit">Submit</button
+				type="submit"
+				value="Send">Submit</button
 			>
 		</form>
 	</div>

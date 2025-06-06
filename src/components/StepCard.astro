@@ -11,9 +11,12 @@ const { title, body, stepNumber, image } = Astro.props
 
 <div
 	class="flex flex-col w-4/5 sm:w-[275px] h-[400px] p-4 border-red-900 border-4 shadow-lg rounded-lg bg-slate-500 mb-4"
+	role="article"
+	aria-labelledby={`step-${stepNumber}-title`}
 >
 	<div
 		class="flex h-auto w-8 border-2 border-slate-200 rounded-full items-center justify-center"
+		aria-hidden="true"
 	>
 		<h3
 			class="text-slate-200 h-full w-full text-2xl flex items-center justify-center"
@@ -22,9 +25,17 @@ const { title, body, stepNumber, image } = Astro.props
 		</h3>
 	</div>
 	<div class="h-1/2 w-auto">
-		<img class="object-contain h-full w-full" src={image} alt={title} />
+		<img
+			class="object-contain h-full w-full"
+			src={image}
+			alt={`Step ${stepNumber}: ${title}`}
+			loading="lazy"
+		/>
 	</div>
-	<h3 class="h-auto text-2xl border-b-2 border-b-red-900 text-slate-200">
+	<h3
+		id={`step-${stepNumber}-title`}
+		class="h-auto text-2xl border-b-2 border-b-red-900 text-slate-200"
+	>
 		{title}
 	</h3>
 	<p class="h-1/4 text-slate-200 pt-4">{body}</p>

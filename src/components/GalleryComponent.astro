@@ -15,20 +15,26 @@ const { imageArray } = Astro.props
 <div
 	class="flex flex-wrap w-full items-center justify-evenly h-full"
 	id="image-section"
+	role="region"
+	aria-label="Image Gallery"
 >
 	{
-		imageArray.map((image) => (
-			<div class="w-full sm:w-1/2 lg:w-1/4 m-6">
-				<img
-					src={image.image}
-					alt={image.imageTitle ?? ""}
-					width={500}
-					height={500}
-					sizes="(max-width: 768px) 100vw, 432px"
-					class=" object-contain w-full h-full rounded-lg shadow-lg"
-				/>
-				{/* <h2>{image.imageTitle}</h2>
-				<p>{image.imageDescription}</p> */}
+		imageArray.map((image, index) => (
+			<div class="w-full sm:w-1/2 lg:w-1/4 m-6" role="article">
+				<figure>
+					<img
+						src={image.image}
+						alt={image.imageTitle ?? `Gallery image ${index + 1}`}
+						width={500}
+						height={500}
+						sizes="(max-width: 768px) 100vw, 432px"
+						class="object-contain w-full h-full rounded-lg shadow-lg"
+						loading="lazy"
+					/>
+					{image.imageTitle && (
+						<figcaption class="sr-only">{image.imageTitle}</figcaption>
+					)}
+				</figure>
 			</div>
 		))
 	}

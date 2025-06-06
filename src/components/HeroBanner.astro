@@ -13,6 +13,7 @@ const { title, subTitle } = Astro.props
 <div
 	aria-label="Hero Banner"
 	class="relative isolate px-6 pt-14 bg-hero-pattern lg:px-8 bg-slate-300 w-screen h-full bg-center bg-cover flex"
+	role="banner"
 >
 	<div
 		class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
@@ -23,7 +24,7 @@ const { title, subTitle } = Astro.props
 		class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56 flex flex-col justify-end"
 	>
 		<div class="text-center flex justify-center">
-			<h1 class="text-4xl font-bold tracking-tight text-gray-600 sm:text-6xl">
+			<h1 class="text-4xl font-bold tracking-tight text-slate-600 sm:text-6xl">
 				{title}
 			</h1>
 			<h2 class="text-3xl text-white font-bold mt-4 animate-pulse">
@@ -32,3 +33,10 @@ const { title, subTitle } = Astro.props
 		</div>
 	</div>
 </div>
+
+<a
+	href="#main-content"
+	class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-white px-4 py-2 rounded-lg shadow-lg"
+>
+	Skip to main content
+</a>

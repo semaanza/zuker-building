@@ -14,11 +14,48 @@ window.onload = function () {
 			emailjs.sendForm("service_mbztsar", "template_tx7chm6", this).then(
 				(result) => {
 					console.log("SUCCESS!", result.text)
-					alert("Message sent successfully!")
+					const formStatus = document.getElementById("form-status")
+					formStatus.textContent = "Message sent successfully!"
+					formStatus.classList.add(
+						"bg-green-500",
+						"text-white",
+						"p-4",
+						"rounded-lg",
+						"shadow-lg",
+					)
+					setTimeout(() => {
+						formStatus.textContent = ""
+						formStatus.classList.remove(
+							"bg-green-500",
+							"text-white",
+							"p-4",
+							"rounded-lg",
+							"shadow-lg",
+						)
+					}, 3000)
+					this.reset()
 				},
 				(error) => {
 					console.log("FAILED...", error)
-					alert("Failed to send message, please try again.")
+					const formStatus = document.getElementById("form-status")
+					formStatus.textContent = "Failed to send message, please try again."
+					formStatus.classList.add(
+						"bg-red-500",
+						"text-white",
+						"p-4",
+						"rounded-lg",
+						"shadow-lg",
+					)
+					setTimeout(() => {
+						formStatus.textContent = ""
+						formStatus.classList.remove(
+							"bg-red-500",
+							"text-white",
+							"p-4",
+							"rounded-lg",
+							"shadow-lg",
+						)
+					}, 3000)
 				},
 			)
 		})

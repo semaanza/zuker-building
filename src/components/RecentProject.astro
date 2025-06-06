@@ -14,26 +14,45 @@ const {
 } = Astro.props
 ---
 
-<div class="flex flex-col items-center mt-4 h-auto">
+<div
+	class="flex flex-col items-center mt-4 h-auto text-slate-600"
+	role="region"
+	aria-label="Recent Project"
+>
 	<h1 class="text-3xl text-center mb-5">{heading}</h1>
-	<div class="text-lg p-2 sm:w-3/4 align-center justify-center mb-4">
+	<div
+		class="text-lg p-2 sm:w-3/4 align-center justify-center mb-4"
+		role="article"
+	>
 		<p class="text-center sm:text-left">{description}</p>
 	</div>
 	<div
 		class="flex flex-col w-full sm:flex-row items-center justify-evenly bg-slate-400 p-8 mt-4"
+		role="complementary"
+		aria-label="Project images"
 	>
-		<div class="flex m-5 sm:w-1/2 h-1/2 flex-wrap items-center justify-center">
+		<div
+			class="flex m-5 sm:w-1/2 h-1/2 flex-wrap items-center justify-center"
+			role="figure"
+			aria-label="Before image"
+		>
 			<img
 				src={preImage}
-				alt="preImage"
+				alt="Before project completion"
 				class="object-contain w-full sm:w-[400px] md:w-4/5 md:h-auto sm:h-[500px] rounded-lg"
+				loading="lazy"
 			/>
 		</div>
-		<div class="flex m-5 sm:w-1/2 h-1/2 flex-wrap items-center justify-center">
+		<div
+			class="flex m-5 sm:w-1/2 h-1/2 flex-wrap items-center justify-center"
+			role="figure"
+			aria-label="After image"
+		>
 			<img
 				src={postImage}
-				alt="postImage"
+				alt="After project completion"
 				class="object-contain w-full sm:w-[400px] md:w-4/5 md:h-auto sm:h-[500px] rounded-lg"
+				loading="lazy"
 			/>
 		</div>
 	</div>

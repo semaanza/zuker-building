@@ -13,20 +13,26 @@ const descriptionWithBreaks = addBreak(description)
 
 <div
 	aria-label="About Section"
-	class="flex flex-wrap flex-col sm:flex-row w-full p-2 sm:p-8 h-auto bg-zinc-300"
+	class="flex text-slate-600 flex-wrap flex-col sm:flex-row w-full p-2 sm:p-8 h-auto bg-zinc-300"
+	role="region"
 >
 	<h2 class="text-3xl w-full text-center mt-4 mb-4">{title}</h2>
 	<div class="flex flex-col sm:flex-row w-full h-auto">
 		<div
 			class="flex flex-col p-2 sm:p-5 h-auto sm:w-1/2 items-center justify-evenly"
+			role="article"
 		>
 			<div
 				set:html={descriptionWithBreaks}
 				class="text-gray-700 text-md sm:text-lg"
 			/>
 		</div>
-		<div class="flex items-center justify-center h-full sm:w-1/2">
-			<img src={image} alt={title} class="rounded-lg" />
+		<div
+			class="flex items-center justify-center h-full sm:w-1/2"
+			role="complementary"
+			aria-label="About image"
+		>
+			<img src={image} alt={title} class="rounded-lg" loading="lazy" />
 		</div>
 	</div>
 </div>
